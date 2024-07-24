@@ -1,4 +1,3 @@
-import { MouseEventHandler } from "react";
 function ExpenseTable(props: { expenses: any[]; delete: MouseEventHandler<HTMLButtonElement> | undefined; }){
     const sum=props.expenses.reduce((current_sum,item)=>{
         current_sum=current_sum+parseInt(item.price);
