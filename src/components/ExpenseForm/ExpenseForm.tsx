@@ -55,6 +55,15 @@ function ExpenseForm(){
                 // @ts-ignore
             }
         }
+        resetFormData()
+    }
+    const resetFormData=()=>{
+        if(DescRef.current!=null && QuantityRef.current!=null && PriceRef.current!=null && CategoryRef.current!=null) {
+            DescRef.current.value = "";
+            QuantityRef.current.value="";
+            PriceRef.current.value="";
+        }
+
     }
     const schema=Joi.object(
         {
