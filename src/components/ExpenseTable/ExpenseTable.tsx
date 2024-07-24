@@ -1,4 +1,4 @@
-function ExpenseTable(props: { expenses: any[]; delete: MouseEventHandler<HTMLButtonElement> | undefined; }){
+function ExpenseTable(props: { expenses: any[]; delete: (arg0: any) => void; }){
     const sum=props.expenses.reduce((current_sum,item)=>{
         current_sum=current_sum+parseInt(item.price);
         return current_sum;
