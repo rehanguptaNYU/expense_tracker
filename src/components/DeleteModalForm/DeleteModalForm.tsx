@@ -4,7 +4,7 @@ import {FormEvent, useRef} from "react";
 import { JSX } from 'react/jsx-runtime';
 
 function DeleteModalForm(props : { currentCategories: string[]; removeCategories: (arg0: any[]) => void; expenseArray: any[]; deleteCategories: (arg0: any) => void; handleDeleteModal: (arg0: boolean) => void; currentDeleteModal: boolean | undefined; }){
-    const CategoryRef=useRef<HTMLInputElement>(null)
+    const CategoryRef=useRef<HTMLSelectElement>(null)
     const handleSubmit=(event:FormEvent)=>{
         event.preventDefault();
         let deleteValue="";
