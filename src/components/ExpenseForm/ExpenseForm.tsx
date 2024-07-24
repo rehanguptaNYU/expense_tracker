@@ -165,7 +165,7 @@ function ExpenseForm(){
     const openDeleteModal=()=>{
         setDeleteModal(true)
     }
-    const displayCategories= categories.map((category)=> {
+    const displayCategories= categories.map((category:string)=> {
         return (
             <option>{category}</option>
         )
