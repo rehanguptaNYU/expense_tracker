@@ -189,8 +189,10 @@ function ExpenseForm(){
     // @ts-ignore
     return(
         <div>
-            <div className="first-bg">
-                <h2 className="text-center mt-3 mb-3 first-bg">Expense Tracker</h2>
+            <div className="expense-container">
+                <div className="heading-bg">
+                    <h2 className="text-center mt-3 mb-3">Expense Tracker</h2>
+                </div>
             </div>
             <Form className="second-bg" onSubmit={handleSubmit}>
                 <Form.Group>
@@ -251,7 +253,7 @@ function ExpenseForm(){
             <br/>
             <br/>
             <div>
-                <select className="form-select form-select-lg fs-5 border border-2 border-dark" ref={FilterRef} onChange={handleFilter}>
+                <select className="form-select form-select-lg fs-5 border border-2 border-dark select-positioning" ref={FilterRef} onChange={handleFilter}>
                     <option>All Categories</option>
                     {displayCategories};
                 </select>
