@@ -1,3 +1,4 @@
+import './ExpenseTable.css'
 function ExpenseTable(props: { expenses: any[]; delete: (arg0: any) => void; }){
     const sum=props.expenses.reduce((current_sum,item)=>{
         current_sum=current_sum+parseInt(item.price);
@@ -5,7 +6,7 @@ function ExpenseTable(props: { expenses: any[]; delete: (arg0: any) => void; }){
     },0)
     return(
         <div>
-            <table className="table table-hover table-bordered table-dark">
+            <table className="table table-hover table-bordered table-dark table-positioning">
                 <thead>
                     <tr className="h5">
                         <th>Description</th>
@@ -17,7 +18,6 @@ function ExpenseTable(props: { expenses: any[]; delete: (arg0: any) => void; }){
                 </thead>
                 <tbody>
                 {props.expenses.map((item,index)=>{
-                        // @ts-ignore
                         return (
                             <tr key={index} className="fs-5">
                                 <td>{item.description}</td>
